@@ -5,13 +5,13 @@ define("PROJECT_ROOT_PATH",  $_SERVER['DOCUMENT_ROOT']."api");
 // include main configuration file
 require_once PROJECT_ROOT_PATH . "/inc/config.php";
 // require_once "inc/config.php";
- 
-die( var_dump( PROJECT_ROOT_PATH ) );
 
 // include the base controller file
 require_once PROJECT_ROOT_PATH . "/Controller/Api/BaseController.php";
 // require_once "Controller/Api/BaseController.php";
- 
+
+die( var_dump( "After the Base Controller ".PROJECT_ROOT_PATH ) );
+
 // include the use model file
 // require_once PROJECT_ROOT_PATH . "/Model/UserModel.php";
 

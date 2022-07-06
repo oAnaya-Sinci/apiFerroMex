@@ -1,6 +1,6 @@
 <?php
 
-// require_once PROJECT_ROOT_PATH . "/Controller/api/BaseController.php";
+require_once PROJECT_ROOT_PATH . "/Controller/api/BaseController.php";
 
 class MaquinasController extends BaseController
 {
@@ -159,7 +159,7 @@ class MaquinasController extends BaseController
         if (strtoupper($requestMethod) == 'GET') {
             try {
                 
-                // require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
+                require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
 die( var_dump( "AnAYA" ) );
                 $maquinaModel = new MaquinasModel();
 

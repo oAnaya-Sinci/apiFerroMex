@@ -1,7 +1,11 @@
 <?php
 // require __DIR__ . "/inc/bootstrap.php";
 
-require "inc/bootstrap.php";
+// require "inc/bootstrap.php";
+
+require_once "inc/config.php";
+require_once "Controller/Api/BaseController.php";
+require_once "Model/MaquinasModel.php";
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode( '/', $uri );
@@ -13,9 +17,9 @@ if ((isset($uri[3]) && $uri[3] != 'maquinas') || !isset($uri[4])) {
 
 die( var_dump( $uri ) );
 
-require PROJECT_ROOT_PATH . "/Controller/Api/MaquinasController.php";
+// require PROJECT_ROOT_PATH . "/Controller/Api/MaquinasController.php";
+require "Controller/Api/MaquinasController.php";
 
 $objFeedController = new MaquinasController();
 $strMethodName = $uri[4];
 $objFeedController->{$strMethodName}();
-?>

@@ -152,9 +152,7 @@ class MaquinasController extends BaseController
      */
     public function obtainDataGps()
     {
-        die( var_dump( PROJECT_ROOT_PATH ) );
-
-        require __DIR__ . "/Model/MaquinasModel";
+        require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
         
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];

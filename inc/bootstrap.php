@@ -1,6 +1,6 @@
 <?php
 // define("PROJECT_ROOT_PATH", __DIR__ . "/../");
-define("PROJECT_ROOT_PATH",  $_SERVER['DOCUMENT_ROOT']."/api");
+define("PROJECT_ROOT_PATH",  $_SERVER['DOCUMENT_ROOT']."api");
 
 die( var_dump( PROJECT_ROOT_PATH ) );
 

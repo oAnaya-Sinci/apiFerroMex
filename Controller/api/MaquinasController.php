@@ -1,4 +1,7 @@
 <?php
+
+require PROJECT_ROOT_PATH . "/Model/MaquinasModel";
+
 class MaquinasController extends BaseController
 {
 

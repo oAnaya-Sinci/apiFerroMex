@@ -153,8 +153,9 @@ class MaquinasController extends BaseController
     {
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
-        die( var_dump( $requestMethod ) );
+        
         if (strtoupper($requestMethod) == 'GET') {
+            die( var_dump( "OMAR ANAYA" ) );
             try {
                 $maquinaModel = new MaquinasModel();
  

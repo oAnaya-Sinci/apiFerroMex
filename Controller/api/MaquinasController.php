@@ -157,17 +157,15 @@ class MaquinasController extends BaseController
         if (strtoupper($requestMethod) == 'GET') {
             try {
 
-                require_once PROJECT_ROOT_PATH . "/Model/DataBase.php";
+                require PROJECT_ROOT_PATH . "/Model/DataBase.php";
 
                 $DB = new DataBase;
+die( var_dump( "AnAYA Barajas" ) );
+                die( var_dump( $dataSelected ) );
 
                 $dataSelected = $DB->select("SELECT * FROM registrosmaquinarias");
 
-die( var_dump( $dataSelected ) );
-
                 // $maquinaModel = new MaquinasModel();
-
-                // die( var_dump( "AnAYA Barajas" ) );
 
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);

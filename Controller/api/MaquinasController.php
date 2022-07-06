@@ -160,7 +160,7 @@ class MaquinasController extends BaseController
             try {
                 
                 require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
-
+die( var_dump( "AnAYA" ) );
                 $maquinaModel = new MaquinasModel();
 
                 $arrMaquinas = $maquinaModel->getDataGPS();

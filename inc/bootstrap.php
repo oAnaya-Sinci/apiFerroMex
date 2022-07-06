@@ -10,10 +10,10 @@ require_once PROJECT_ROOT_PATH . "/inc/config.php";
 require_once PROJECT_ROOT_PATH . "/Controller/api/BaseController.php";
 // require_once "Controller/Api/BaseController.php";
 
-die( var_dump( "After the api BaseController.php ".PROJECT_ROOT_PATH ) );
-
 // include the use model file
 // require_once PROJECT_ROOT_PATH . "/Model/UserModel.php";
 
 require_once PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
 // require_once "Model/MaquinasModel.php";
+
+die( var_dump( "After the Model MaquinasMOdel.php ".PROJECT_ROOT_PATH ) );

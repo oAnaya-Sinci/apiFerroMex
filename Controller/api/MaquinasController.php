@@ -156,9 +156,9 @@ class MaquinasController extends BaseController
         
         if (strtoupper($requestMethod) == 'GET') {
             try {
-
-                require PROJECT_ROOT_PATH . "/Model/DataBase.php";
                 die( var_dump( "AnAYA Barajas" ) );
+                require PROJECT_ROOT_PATH . "/Model/DataBase.php";
+                
                 $DB = new DataBase;
 
                 die( var_dump( $dataSelected ) );

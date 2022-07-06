@@ -1,7 +1,5 @@
 <?php
 
-require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
-
 class MaquinasController extends BaseController
 {
 
@@ -154,6 +152,8 @@ class MaquinasController extends BaseController
      */
     public function obtainDataGps()
     {
+        require PROJECT_ROOT_PATH . "/Model/MaquinasModel";
+        
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
         

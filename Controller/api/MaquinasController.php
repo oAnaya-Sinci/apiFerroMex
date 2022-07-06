@@ -157,11 +157,12 @@ class MaquinasController extends BaseController
         if (strtoupper($requestMethod) == 'GET') {
             try {
                 $maquinaModel = new MaquinasModel();
- die( var_dump( $maquinaModel ) );
+ 
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);
             } catch (Error $e) {
                 $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';
+                die( var_dump( $strErrorDesc ) );
                 $strErrorHeader = ' HTTP/1.1 500 Internal Server Error';
             }
         } else {

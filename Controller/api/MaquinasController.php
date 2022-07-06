@@ -1,8 +1,9 @@
 <?php
 
+require_once PROJECT_ROOT_PATH . "/Controller/api/BaseController.php";
+
 class MaquinasController extends BaseController
 {
-
     /**
      * "/maquinas/obtain data GPS" Endpoint - Get data of GPS
      */
@@ -152,16 +153,15 @@ class MaquinasController extends BaseController
      */
     public function obtainDataGps()
     {
-        require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
-        
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
         
         if (strtoupper($requestMethod) == 'GET') {
             try {
+                
+                require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
+
                 $maquinaModel = new MaquinasModel();
- 
-                die( var_dump( "Carlos Omar Anaya Barajas" ) );
 
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);

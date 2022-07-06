@@ -13,8 +13,5 @@ require PROJECT_ROOT_PATH . "/Controller/api/MaquinasController.php";
 
 $objFeedController = new MaquinasController();
 $strMethodName = $uri[4]."()";
-
 // $objFeedController->{$strMethodName}();
 $objFeedController->$strMethodName;
-
-die( var_dump( $uri ) );

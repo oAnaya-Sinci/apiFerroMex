@@ -156,9 +156,10 @@ class MaquinasController extends BaseController
         
         if (strtoupper($requestMethod) == 'GET') {
             try {
-                die( var_dump( "OMAR ANAYA Barajas" ) );
                 $maquinaModel = new MaquinasModel();
  
+                die( var_dump( "Carlos Omar Anaya Barajas" ) );
+
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);
             } catch (Error $e) {

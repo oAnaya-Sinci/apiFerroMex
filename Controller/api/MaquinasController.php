@@ -155,6 +155,8 @@ class MaquinasController extends BaseController
         
         if (strtoupper($requestMethod) == 'GET') {
             try {
+                die( var_dump( " Barajas" ) );
+
                 $maquinaModel = new MaquinasModel();
 
                 die( var_dump( "AnAYA Barajas" ) );

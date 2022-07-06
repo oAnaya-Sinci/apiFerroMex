@@ -9,6 +9,8 @@ if ((isset($uri[3]) && $uri[3] != 'maquinas') || !isset($uri[4])) {
     exit();
 }
 
+die( var_dump( $uri ) );
+
 require PROJECT_ROOT_PATH . "/Controller/api/MaquinasController.php";
 
 $objFeedController = new MaquinasController();

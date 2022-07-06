@@ -158,9 +158,9 @@ class MaquinasController extends BaseController
             try {
 
                 require PROJECT_ROOT_PATH . "/Model/DataBase.php";
-
+                die( var_dump( "AnAYA Barajas" ) );
                 $DB = new DataBase;
-die( var_dump( "AnAYA Barajas" ) );
+
                 die( var_dump( $dataSelected ) );
 
                 $dataSelected = $DB->select("SELECT * FROM registrosmaquinarias");

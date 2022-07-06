@@ -9,7 +9,7 @@ if ((isset($uri[3]) && $uri[3] != 'maquinas') || !isset($uri[4])) {
     exit();
 }
 
-require PROJECT_ROOT_PATH . "/Controller/Api/MaquinasController.php";
+require PROJECT_ROOT_PATH . "/Controller/api/MaquinasController.php";
 
 $objFeedController = new MaquinasController();
 $strMethodName = $uri[4];

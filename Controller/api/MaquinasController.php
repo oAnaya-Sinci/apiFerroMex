@@ -153,11 +153,11 @@ class MaquinasController extends BaseController
     {
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
-die( var_dump( $requestMethod ) );
+
         if (strtoupper($requestMethod) == 'GET') {
             try {
                 $maquinaModel = new MaquinasModel();
- 
+ die( var_dump( $maquinaModel ) );
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);
             } catch (Error $e) {

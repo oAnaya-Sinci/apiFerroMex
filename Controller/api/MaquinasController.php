@@ -1,7 +1,4 @@
 <?php
-
-require_once PROJECT_ROOT_PATH . "/Controller/api/BaseController.php";
-
 class MaquinasController extends BaseController
 {
     /**
@@ -158,10 +155,9 @@ class MaquinasController extends BaseController
         
         if (strtoupper($requestMethod) == 'GET') {
             try {
-                
-                require PROJECT_ROOT_PATH . "/Model/MaquinasModel.php";
-die( var_dump( "AnAYA" ) );
                 $maquinaModel = new MaquinasModel();
+
+                die( var_dump( "AnAYA Barajas" ) );
 
                 $arrMaquinas = $maquinaModel->getDataGPS();
                 $responseData = json_encode($arrMaquinas);

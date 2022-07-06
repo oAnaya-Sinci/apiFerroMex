@@ -1,7 +1,7 @@
 <?php
 require_once PROJECT_ROOT_PATH . "/Model/DataBase.php";
  
-class MaquinasModel extends Database
+class MaquinasModel extends DataBase
 {
     public function getDataGPS()
     {

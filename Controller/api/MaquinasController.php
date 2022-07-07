@@ -158,7 +158,7 @@ class MaquinasController extends BaseController
             try {
                 $maquinaModel = new MaquinasModel();
 
-                $arrMaquinas = $maquinaModel->getDataGPS();
+                $arrMaquinas = $maquinaModel->getDataGPS($_GET);
                 $responseData = json_encode($arrMaquinas);
             } catch (Error $e) {
                 $strErrorDesc = $e->getMessage().' Something went wrong! Please contact support.';

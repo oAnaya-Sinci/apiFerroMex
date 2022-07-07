@@ -13,17 +13,4 @@ require PROJECT_ROOT_PATH . "/Controller/api/MaquinasController.php";
 
 $objFeedController = new MaquinasController();
 $strMethodName = $uri[4];
-// $objFeedController->{$strMethodName}();
-
-switch ($strMethodName) {
-    case 'obtainDataGps':
-        $objFeedController->obtainDataGps();
-        break;
-    
-    default:
-        # code...
-        break;
-}
-
-// $objFeedController->$strMethodName;
-    
+$objFeedController->{$strMethodName}();

@@ -3,9 +3,11 @@ require_once PROJECT_ROOT_PATH . "/Model/DataBase.php";
  
 class MaquinasModel extends DataBase
 {
-    public function getDataGPS()
+    public function getDataGPS($params)
     {
-        return $this->select("SELECT * FROM registrosmaquinarias");
+        $query = "SELECT latitud, longitud FROM registrosmaquinarias WHERE fechaRegistro BETWEEN '" . $params['startDate'] ."' AND '" . $params['endedDate'] . "' AND idMaquina = " . $params['machineSelected'];
+die( var_dump( $query ) );
+        return $this->select($query);
     }
 
     public function getAcumuladoDiesel()
